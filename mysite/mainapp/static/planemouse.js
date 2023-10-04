@@ -22,11 +22,11 @@ function steerPlane(event) {
             coords.y = planeY;
 
             if ((toDegrees(getAngle(planeX,planeY,x,y))) > angle && ((toDegrees(getAngle(planeX,planeY,x,y))) < angle + 180)) {
-                angle += 5;
+                angle += 2;
             } else if ((angle > 180) && (toDegrees(getAngle(planeX,planeY,x,y)) < 180) && ((angle - toDegrees(getAngle(planeX,planeY,x,y))) > 180)) {
-                angle += 5;
+                angle += 2;
             } else {
-                angle -= 5;
+                angle -= 2;
             }
 
             if (angle > 360) {

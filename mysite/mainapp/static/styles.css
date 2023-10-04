@@ -310,7 +310,7 @@ button[data-active] {
     "skills education";
   grid-gap: 0px;
 }
-@media all and (max-width: 892px) {
+@media all and (max-width: 1000px) {
 
   .intro-container {
     place-items: center;

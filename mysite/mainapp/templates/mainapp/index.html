@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 
 <head>
-  <link rel="stylesheet" href="{% static 'styles.css' %}"">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <title>Lincoln Ledet</title>
   <meta charset="UTF-8">
   <meta name="description" content="A software developer who loves to learn">
@@ -70,7 +71,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
-      <img id="planeImg" src="plane.png">
+      <img id="planeImg" src="{% static 'plane.png' %}">
     </div>
 
     <!-- landscape layer 2 - mountains 1 -->
@@ -204,7 +205,7 @@
         which allow me to express my creativity and foster a balanced lifestyle. </p1>
     </div>
     <div class="intro-image">
-      <img src="pixleProfilePic.png">
+      <img src="{% static 'pixleProfilePic.png' %}">
       <div class='animatedTextContainer'>
         <div id="text"></div>
         <div id="cursor"></div>
@@ -237,7 +238,7 @@
   <div class="resume-container">
     <div class="resume-grid">
       <div class="resume-skillspic" height>
-        <img src="hatPic.jpg" >
+        <img src="{% static 'hatpic.jpg' %}" >
         <div class="logoinfo">
           <div class=logo-container>
             <svg fill="#000000" height="42px" width="42px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -653,11 +654,12 @@
             equipping me with valuable skills and knowledge for my future endeavors.</p1></br>
       </div>
     </div>
-    <script src="planemouse.js"></script>
-    <script src="app.js"></script>
-    <script src="mountain.js"></script>
-    <script src="textAnimate.js"></script>
-    <script src="scrollshit.js"></script>
+    <script src="{% static 'planemouse.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'mountain.js' %}"></script>
+    <script src="{% static 'textAnimate.js' %}"></script>
+    <script src="{% static 'scrollshit.js' %}"></script>
+    "{% static 'styles.css' %}"
 </body>
 
 </html>
