@@ -3,3 +3,12 @@
 
 git command notes:
 'git push origin main' add code to github
+
+python manage.py makemigrations
+
+to get into a command line type
+python manage.py shell
+
+    from mainapp.models import plants
+    musc = Plants(commonNames = "Muscidine", ScientificName = "Vitis rotundifolia")
+     musc.save()
