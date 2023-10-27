@@ -7,7 +7,12 @@ def index(response):
     return render(response, "mainapp/index.html",  {})
 
 def plants(response):
-    return HttpResponse("<h1>Hello world!</h1>")
+    return render(response,  "mainapp/plantshomepage.html", {}) #rendering the html file
+
+def plantinfo(response, id):
+    ls = Plants.objects.get(id=id)
+    return HttpResponse("<h1>Hello plantinfo!     %s</h1>"%ls.commonNames)
+
 
 
 # Create your views here.
