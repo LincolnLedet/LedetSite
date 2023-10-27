@@ -26,6 +26,10 @@ from mainapp.models import Plants
 
 Data base management shit 
 
+    to add a django admin login you need to create a super user account
+    python manage.py createsuperuser
+
+
     python manage.py shell
     from mainapp.models import Plants
     allPlants = Plants.objects
@@ -36,7 +40,7 @@ Data base management shit
     del_object = allPlants.get(id=1)
     del_object.delete()
 
-    REMember to add these lines in the admin.py file so you can access them throught the control panel
+    REMember to add these lines in the admin.py file so you can access them through the control panel
     from .models import Plants
     admin.site.register(Plants)
 
