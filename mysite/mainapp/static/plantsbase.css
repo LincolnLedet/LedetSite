@@ -1,6 +1,41 @@
 /* CSS code for a green bar at the top of the page */
 .header {
-    background-color: lightgreen;
-    height: 50px; /* Adjust the height as needed */
-    width: 100%;
   }
+
+body {
+    background-image: url(Plantbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* or contain, depending on your preference */
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+.top-row {
+  height: 50px; /* Adjust the height as needed */
+  width: 100%;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  width: 900px; /* Adjust the width as needed */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+#plantIcon{
+  grid-area: 'icon';
+  height: 50px; /* Adjust the height as needed */
+  width: 50px;
+}
+
+.plant-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
