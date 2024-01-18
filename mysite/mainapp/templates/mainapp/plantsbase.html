@@ -10,38 +10,44 @@
     <img id="plantIcon" src="{% static 'PixelPlantLogo.png' %}">
     </div>
     <div class="plant-form">
-      <form action="/action_page.php">
-        <label>Type of Plant:</label><br>
-        <input type="checkbox" id="tree" name="plant_type" value="tree">
-        <label for="tree"> Tree</label><br>
-        <input type="checkbox" id="bush" name="plant_type" value="bush">
-        <label for="bush"> Bush</label><br>
-        <input type="checkbox" id="flower" name="plant_type" value="flower">
-        <label for="flower"> Flower</label><br><br>
-      
-        <label>Life Cycle:</label><br>
-        <input type="checkbox" id="perennial" name="life_cycle" value="perennial">
-        <label for="perennial"> Perennial</label><br>
-        <input type="checkbox" id="biennial" name="life_cycle" value="biennial">
-        <label for="biennial"> Biennial</label><br>
-        <input type="checkbox" id="annual" name="life_cycle" value="annual">
-        <label for="annual"> Annual</label><br><br>
-      
-        <label>Use:</label><br>
-        <input type="checkbox" id="edible" name="use" value="edible">
-        <label for="edible"> Edible</label><br>
-        <input type="checkbox" id="medical" name="use" value="medical">
-        <label for="medical"> Medical</label><br>
-        <input type="checkbox" id="both" name="use" value="both">
-        <label for="both"> Both (Edible and Medical)</label><br><br>
-      
-        <label>Light Requirements:</label><br>
-        <input type="checkbox" id="full_sun" name="light_requirements" value="full_sun">
-        <label for="full_sun"> Full Sun</label><br>
-        <input type="checkbox" id="partial_sun" name="light_requirements" value="partial_sun">
-        <label for="partial_sun"> Partial Sun</label><br>
-        <input type="checkbox" id="shade" name="light_requirements" value="shade">
-        <label for="shade"> Shade</label><br><br>
+      <form action="/action_page.php" method="post">
+          <div class="form-container">
+            <div class="form-column">
+              <label>Type of Plant:</label><br>
+              <input type="checkbox" id="tree" name="plant_type" value="tree">
+              <label for="tree"> Tree</label><br>
+              <input type="checkbox" id="bush" name="plant_type" value="bush">
+              <label for="bush"> Bush</label><br>
+              <input type="checkbox" id="flower" name="plant_type" value="flower">
+              <label for="flower"> Flower</label><br><br>
+            
+              <label>Life Cycle:</label><br>
+              <input type="checkbox" id="perennial" name="life_cycle" value="perennial">
+              <label for="perennial"> Perennial</label><br>
+              <input type="checkbox" id="biennial" name="life_cycle" value="biennial">
+              <label for="biennial"> Biennial</label><br>
+              <input type="checkbox" id="annual" name="life_cycle" value="annual">
+              <label for="annual"> Annual</label><br><br>
+            </div>
+          
+            <div class="form-column">
+              <label>Use:</label><br>
+              <input type="checkbox" id="edible" name="use" value="edible">
+              <label for="edible"> Edible</label><br>
+              <input type="checkbox" id="medical" name="use" value="medical">
+              <label for="medical"> Medical</label><br>
+              <input type="checkbox" id="both" name="use" value="both">
+              <label for="both"> Both (Edible and Medical)</label><br><br>
+            
+              <label>Light Requirements:</label><br>
+              <input type="checkbox" id="full_sun" name="light_requirements" value="full_sun">
+              <label for="full_sun"> Full Sun</label><br>
+              <input type="checkbox" id="partial_sun" name="light_requirements" value="partial_sun">
+              <label for="partial_sun"> Partial Sun</label><br>
+              <input type="checkbox" id="shade" name="light_requirements" value="shade">
+              <label for="shade"> Shade</label><br><br>
+            </div>
+        </div>
       
         <input type="submit" value="Submit">
       </form>
