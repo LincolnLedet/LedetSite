@@ -13,7 +13,7 @@ class PlantSpecies(models.Model):
     common_name = models.CharField(max_length=100)
     scientific_name = models.CharField(max_length=100)
     description = models.TextField()
-    origin = models.CharField(max_length=100)
+    zone = models.CharField(max_length=100)
 
     def __str__(self):
         return self.common_name
@@ -21,8 +21,8 @@ class PlantSpecies(models.Model):
 class GrowthCondition(models.Model):
     species = models.OneToOneField(PlantSpecies, on_delete=models.CASCADE)
     sunlight = models.CharField(max_length=100, choices=[('full', 'Full Sun'), ('partial', 'Partial Shade'), ('shade', 'Shade')])
-    water_frequency = models.IntegerField(help_text="Days between watering")
-    preferred_temperature_range = models.CharField(max_length=50)
+    water_frequency = models.IntegerField(help_text="inches per week")
+    preferred_temperature_range = models.CharField(max_length=30)
     soil_type = models.CharField(max_length=100)
 
     def __str__(self):
@@ -31,21 +31,11 @@ class GrowthCondition(models.Model):
 class Plant(models.Model):
     species = models.ForeignKey(PlantSpecies, on_delete=models.CASCADE)
     nickname = models.CharField(max_length=100, blank=True)
-    date_acquired = models.DateField()
     height = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0.0)])
     is_indoor = models.BooleanField()
 
     def __str__(self):
         return f"{self.nickname or self.species.common_name} - {self.height} cm"
-
-class CareRecord(models.Model):
-    plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
-    date = models.DateField()
-    height = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0.0)])
-    notes = models.TextField(blank=True)
-
-    def __str__(self):
-        return f"Care Record for {self.plant.nickname or self.plant.species.common_name} on {self.date}"
 
 class Photo(models.Model):
     plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
