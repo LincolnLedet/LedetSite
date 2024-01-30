@@ -8,7 +8,6 @@ def index(response):
 
 def plants(response):
     return render(response,  "mainapp/plantshomepage.html", {}) #rendering the html file
-
 def plantinfo(response, id):
     ls = Plants.objects.get(id=id)
     return HttpResponse("<h1>Hello plantinfo!     %s</h1>"%ls.commonNames)
