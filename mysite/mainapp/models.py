@@ -37,13 +37,4 @@ class Plant(models.Model):
     def __str__(self):
         return f"{self.nickname or self.species.common_name} - {self.height} cm"
 
-class Photo(models.Model):
-    plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='plant_photos')
-    caption = models.CharField(max_length=255, blank=True)
-    date_taken = models.DateField()
-
-    def __str__(self):
-        return f"Photo of {self.plant.nickname or self.plant.species.common_name} on {self.date_taken}"
-
-
+# class Photo(models.Model):
